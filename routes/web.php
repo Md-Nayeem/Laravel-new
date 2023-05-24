@@ -17,76 +17,80 @@ use Illuminate\Support\Facades\DB; //This is used for the Database practice here
 */
 
 Route::get('/', function () {
-    // return view('welcome');
-
-    // dd('Nayeem');
-
-    //****SQL query using DB facade *****
-
-    //Select users 
-    // $users = DB::select('select * from users');
-    // $users = DB::select('select * from users where email = ?',['nayeemmd229@gmail.com']);
-    // $users = DB::select('select * from users where id=? and email = ?',[1,'nayeemmd229@gmail.com']);
-
-    //Insert user
-    // $user = DB::insert('insert into users (name, email, password) values(?,?,?)',['nadim','nadim@gmail.com','45214521']);
-
-    //Update user
-    // $user = DB::update('update users set name=? where id=?',['Person',3]);
-
-    //Delete user
-    // $user = DB::delete('delete from users where name=?' , ['Person']);
+    return view('welcome');
+    //CRUD below 
+        //****SQL query using DB facade *****
+        // dd('Nayeem');
 
 
+        //Select users 
+        // $users = DB::select('select * from users');
+        // $users = DB::select('select * from users where email = ?',['nayeemmd229@gmail.com']);
+        // $users = DB::select('select * from users where id=? and email = ?',[1,'nayeemmd229@gmail.com']);
 
-    //*****Query Builder laravel... here the collection will be used ****
+        //Insert user
+        // $user = DB::insert('insert into users (name, email, password) values(?,?,?)',['nadim','nadim@gmail.com','45214521']);
 
-    //select user
-    $users = DB::table('users')->get();
-    // $users = DB::table('users')->where('email','2')->get();
+        //Update user
+        // $user = DB::update('update users set name=? where id=?',['Person',3]);
 
-    //insert user
-    // $user = DB::table('users')->insert([
-    //     'name'=>'Nadim',
-    //     'email'=>'nadim@gmail.com',
-    //     'password'=>'45214521'
-    // ]);
-
-    //update user 
-    // $user = DB::table('users')
-    //     ->where('id', 4)
-    //     ->update(['name' => 'Person']);
-    
-    //delete user
-    // $user = DB::table('users')
-    //     ->where('name','Person')
-    //     ->delete();
-
-    //*****CRUD using eloquent model****
-
-
-    //Getting data using eloquent model
-    // $user = User::where('id',1)->first();
-
-    //Inserting or creating user 
-    // $user = User::create([
-    //     'name'=>'Nadim',
-    //     'email'=>'nadim@gmail.com',
-    //     'password'=>'45214521'
-    // ]);
-
-    //Updating user 
-    // $user = User::find(6);
-    // $user->update([
-    //     'name' => 'Person'
-    // ]);
-
-    //Delete user 
-    // $user = User::find(6)->delete();
+        //Delete user
+        // $user = DB::delete('delete from users where name=?' , ['Person']);
 
 
 
-    dd($users);
+        //*****Query Builder laravel... here the collection will be used ****
+
+        //select user
+        // $users = DB::table('users')->get();
+
+
+        // $users = DB::table('users')->where('email','2')->get();
+
+        //insert user
+        // $user = DB::table('users')->insert([
+        //     'name'=>'Nadim',
+        //     'email'=>'nadim@gmail.com',
+        //     'password'=>'45214521'
+        // ]);
+
+        //update user 
+        // $user = DB::table('users')
+        //     ->where('id', 4)
+        //     ->update(['name' => 'Person']);
+        
+        //delete user
+        // $user = DB::table('users')
+        //     ->where('name','Person')
+        //     ->delete();
+
+        //*****CRUD using eloquent model****
+
+
+        //Getting data using eloquent model
+        // $user = User::where('id',1)->first();
+
+        //Inserting or creating user 
+        // $user = User::create([
+        //     'name'=>'Nadim',
+        //     'email'=>'naddfimsdfss@gmail.com',
+        //     'password'=>'Password'
+        // ]);
+
+        //Updating user 
+        // $user = User::find(6);
+        // $user->update([
+        //     'name' => 'Person'
+        // ]);
+
+        //Delete user 
+        // $user = User::find(6)->delete();
+
+
+        //User name in upper case 
+        // $user = User::find(1)->name;
+
+        // dd($users);
 
 
 
