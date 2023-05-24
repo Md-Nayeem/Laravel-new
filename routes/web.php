@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;//for using the user model here.
 use Illuminate\Support\Facades\DB; //This is used for the Database practice here.
 
 /*
@@ -60,6 +61,30 @@ Route::get('/', function () {
     // $user = DB::table('users')
     //     ->where('name','Person')
     //     ->delete();
+
+    //*****CRUD using eloquent model****
+
+
+    //Getting data using eloquent model
+    // $user = User::where('id',1)->first();
+
+    //Inserting or creating user 
+    // $user = User::create([
+    //     'name'=>'Nadim',
+    //     'email'=>'nadim@gmail.com',
+    //     'password'=>'45214521'
+    // ]);
+
+    //Updating user 
+    // $user = User::find(6);
+    // $user->update([
+    //     'name' => 'Person'
+    // ]);
+
+    //Delete user 
+    // $user = User::find(6)->delete();
+
+
 
     dd($users);
 
