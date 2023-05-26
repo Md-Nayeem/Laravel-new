@@ -27,7 +27,15 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        // 'avatar', //added for user profile, tested in tinker.
     ];
+
+
+    // The below code unguards all fields.
+    // protected $guarded = [];
+
+
+
 
     /**
      * The attributes that should be hidden for serialization.

@@ -91,15 +91,9 @@ Route::get('/', function () {
         // $user = User::find(1)->name;
 
         // dd($users);
-
-
-
-
-
-
-
-
-});
+    
+    //Configuration file php artisan cache via using -> php artisan config:cache
+    });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
