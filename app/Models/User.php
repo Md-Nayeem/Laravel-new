@@ -34,8 +34,8 @@ class User extends Authenticatable
     // The below code unguards all fields.
     // protected $guarded = [];
 
-
-
+    //to make a field fixed or not changable 
+    // protected $guarded = ['name'];
 
     /**
      * The attributes that should be hidden for serialization.
