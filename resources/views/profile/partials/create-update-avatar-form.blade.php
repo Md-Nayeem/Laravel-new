@@ -24,7 +24,7 @@
 
 
     
-    <form action="{{ route('profile.avatar') }}" method="post">
+    <form action="{{ route('profile.avatar') }}" method="post" enctype="multipart/form-data">
         @method('patch')
         @csrf
 
@@ -33,10 +33,25 @@
             <x-text-input id="avatar" name="avatar" type="file" class="mt-1 block w-full"   />
         </div>
 
+        <!-- Default error handler -->
+        <x-input-error class="mt-2" :messages="$errors->get('avatar')" />
+
         <div class="flex items-center gap-4 mt-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
         </div>
+
     </form>
+    
+    <!-- error msg -->
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
         
 
