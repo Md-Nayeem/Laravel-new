@@ -27,7 +27,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        // 'avatar', //added for user profile, tested in tinker.
+        'avatar', //added for user profile, tested in tinker.
     ];
 
 
